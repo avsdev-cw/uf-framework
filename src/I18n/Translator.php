@@ -10,9 +10,6 @@
 
 namespace UserFrosting\I18n;
 
-use Twig_Environment;
-use Twig_Loader_Filesystem;
-
 /**
  * Translator Class.
  *
@@ -50,8 +47,8 @@ class Translator
         $this->dictionary->getDictionary();
 
         // Preapre Twig Environment
-        $loader = new Twig_Loader_Filesystem();
-        $this->twig = new Twig_Environment($loader);
+        $loader = new \Twig\Loader\FilesystemLoader();
+        $this->twig = new \Twig\Environment($loader);
     }
 
     /**
